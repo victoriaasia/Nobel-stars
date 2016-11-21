@@ -122,7 +122,7 @@ img {
     right: 275px;
     padding: 10px 35px; }
   .nob-stars-intro .nob-stars-title-pink:nth-child(3) {
-    top: 230px;
+    bottom: 320px;
     right: 120px; }
   .nob-stars-intro__content {
     display: -webkit-box;
@@ -131,8 +131,11 @@ img {
     display: flex;
     padding: 10px 40px; }
   .nob-stars-intro-img {
-    max-width: 50%;
-    height: 610px; }
+    width: 50%;
+    height: 610px;
+    background: url(../img/photo1.png) no-repeat;
+    background-size: contain;
+    background-position: center; }
   .nob-stars-intro-text {
     max-width: 40%;
     font-size: 30px;
@@ -204,8 +207,9 @@ img {
   .nob-stars-white .nob-stars-img {
     position: absolute;
     top: -265px;
-    width: 75%;
-    left: 12%; }
+    width: 80%;
+    left: 125px;
+    height: 510px; }
   .nob-stars-white .nob-stars-buttons {
     display: -webkit-box;
     display: -webkit-flex;
@@ -217,12 +221,12 @@ img {
     margin-top: 255px;
     padding: 0 40px; }
     .nob-stars-white .nob-stars-buttons > div {
-      width: 190px;
+      width: 100%;
       text-align: center; }
   .nob-stars-white .nob-stars-btn:not(checked) + label {
     padding: 85px 0 0;
     display: block;
-    width: 190px; }
+    width: 100%; }
     .nob-stars-white .nob-stars-btn:not(checked) + label:before {
       border-color: #e90049;
       background: #fff;
@@ -280,3 +284,31 @@ img {
   .nob-stars-pink .nob-stars-btn:not(checked) + label:after {
     background: #fff;
     left: 3px; }
+
+@media screen and (max-width: 768px) {
+  .nob-stars-container {
+    width: 768px; }
+
+  .nob-stars-intro {
+    height: 720px;
+    padding-bottom: 20px; }
+    .nob-stars-intro__content {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      padding: 10px 15px; }
+    .nob-stars-intro-img {
+      width: 100%;
+      background-position: left; }
+    .nob-stars-intro .nob-stars-title-pink:nth-child(1) {
+      top: 285px;
+      right: 40px; }
+    .nob-stars-intro .nob-stars-title-pink:nth-child(2) {
+      top: auto;
+      right: 170px;
+      bottom: 250px; }
+    .nob-stars-intro .nob-stars-title-pink:nth-child(3) {
+      bottom: 155px;
+      right: 0px; } }
