@@ -1,0 +1,216 @@
+$violet: #990066
+$pink: #e90049
+$white: #fff
+$black: #000
+
+// reset
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video
+  margin: 0
+  padding: 0
+  border: 0
+  font-size: 100%
+  font: inherit
+  vertical-align: baseline
+
+// common styles
+
+img
+  width: 100%
+  max-height: 100%
+.nob-stars-container ::-moz-selection
+  background: $violet
+  color: $white
+.nob-stars-container ::selection
+  background: $violet
+  color: $white
+
+.nob-stars-block2
+  display: none
+.nob-stars-block3
+  display: none
+.nob-stars-block4
+  display: none
+.nob-stars-block5
+  display: none
+.nob-stars-block6
+  display: none
+.nob-stars-block7
+  display: none
+.img-answer.hidden
+  display: none
+
+.nob-stars-container
+  width: 1100px
+  height: 100%
+  margin: 0 auto
+  background-color: $white
+
+.nob-stars-title-pink
+  position: absolute
+  background-color: $pink
+  padding: 7px 10px
+  color: $white
+  font-size: 76px
+  line-height: 76px
+  text-transform: uppercase
+  font-family: "rob-light"
+
+.nob-stars-nowrap
+  white-space: nowrap
+
+.nob-stars-block
+  height: 600px
+  width: 100%
+  padding: 45px 40px
+  box-sizing: border-box
+  &__content
+    border: 1px solid
+    padding: 45px
+    height: 100%
+    box-sizing: border-box
+
+.nob-stars-btn
+  vertical-align: top
+  width: 17px
+  height: 17px
+  margin: 0 3px 0 0
+  + label
+    cursor: pointer
+    font-size: 40px
+    font-family: "rob-bold"
+    line-height: 40px
+  &:not(checked)
+    position: absolute
+    opacity: 0
+    + label
+      position: relative
+      padding: 0 0 0 100px
+      &:before
+        content: ''
+        position: absolute
+        top: 5px
+        width: 60px
+        height: 60px
+        border: 4px solid
+        border-radius: 50%
+      &:after
+        content: ''
+        position: absolute
+        top: 8px
+        width: 60px
+        height: 60px
+        border-radius: 50%
+        box-shadow: inset 0 1px 1px rgba($black, 0.5)
+        opacity: 0
+        transition: all .2s
+  &:checked + label:after
+    opacity: 1
+
+.nob-stars-violet
+  background: $violet
+  color: $white
+  .nob-stars-block__content
+    border-color: $white
+    display: flex
+  .nob-stars-img
+    width: 535px
+    height: 405px
+  .nob-stars-buttons
+    width: 360px
+    height: 410px
+    box-sizing: border-box
+    padding: 12px 60px
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    > div
+      display: flex
+  .nob-stars-btn
+    &:not(checked)
+      + label
+        &:before
+          border-color: $white
+          background: $violet
+          left: -10px
+          top: 47%
+          transform: translateY(-50%)
+        &:after
+          background: $white
+          left: -6px
+          top: 47%
+          transform: translateY(-50%)
+
+.nob-stars-white
+  margin-top: 50px
+  .nob-stars-block__content
+    height: 100%
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    align-items: center
+  .nob-stars-img
+    width: 63%
+    height: 385px
+    margin-top: -140px
+  .nob-stars-buttons
+    width: 80%
+    display: flex
+    justify-content: space-around
+    padding: 0 30px
+    > div
+      width: 100%
+      text-align: center
+  .nob-stars-btn
+    &:not(checked)
+      + label
+        padding: 85px 0 0
+        display: block
+        width: 100%
+        &:before
+          border-color: $pink
+          background: $white
+          left: 50%
+          transform: translateX(-50%)
+        &:after
+          background: $pink
+          left: 50%
+          transform: translateX(-50%)
+
+.nob-stars-pink
+  background: $pink
+  color: $white
+  .nob-stars-block__content
+    border-color: $white
+    display: flex
+  .nob-stars-img
+    width: 535px
+    height: 405px
+  .nob-stars-buttons
+    width: 360px
+    height: 410px
+    box-sizing: border-box
+    padding: 12px 0
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    > div
+      display: flex
+  .nob-stars-btn
+    &:not(checked)
+      + label
+        &:before
+          border-color: $white
+          background: $pink
+          left: 0
+          top: 50%
+          transform: translateY(-50%)
+        &:after
+          background: $white
+          left: 3.5px
+          top: 50%
+          transform: translateY(-50%)
+
+#nob-stars-form
+  height: 100%
+
+@import "media"
